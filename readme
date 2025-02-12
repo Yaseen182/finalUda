@@ -1,0 +1,8 @@
+# Travel Planner
+
+A simple travel planning app built using Node.js, Express, and Webpack.
+
+## How to Run
+1. Install dependencies: `npm install`
+2. Start the server: `npm start`
+3. Build the project: `npm run build`
