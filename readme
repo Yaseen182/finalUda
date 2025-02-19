@@ -1,8 +1,45 @@
-# Travel Planner
+Here's your README file content based on the provided instructions:
 
-A simple travel planning app built using Node.js, Express, and Webpack.
+---
 
-## How to Run
-1. Install dependencies: `npm install`
-2. Start the server: `npm start`
-3. Build the project: `npm run build`
+# Project Setup Instructions  
+
+## Node.js Version Requirement  
+
+To ensure compatibility and avoid potential issues, please make sure you are using the correct Node.js version for this project.  
+
+### Required Node.js Version  
+This project requires **Node.js v18** or **Node.js v20** (or any specified version that you used during development).  
+
+### Setup Instructions  
+
+1. **Check Your Node.js Version**  
+   Run the following command to check your current Node.js version:  
+   ```sh
+   node -v
+   ```
+   If your version does not match the required version, install the correct version before proceeding.  
+
+2. **Install Dependencies**  
+   After ensuring you have the correct Node.js version, install the required dependencies using:  
+   ```sh
+   npm install
+   ```
+
+3. **Run the Project**  
+   Start the project using the following command:  
+   ```sh
+   npm start
+   ```
+
+4. **Additional Environment Details**  
+   - Ensure all necessary environment variables are set up if required.  
+   - Follow any additional setup instructions provided in the project documentation.  
+
+Once you have verified and updated these details, you can proceed with submitting the project for evaluation.  
+
+### Thank you for your attention to this matter! 🚀  
+
+---
+
+Let me know if you need any modifications! 😊
