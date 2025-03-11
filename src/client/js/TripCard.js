@@ -1,14 +1,22 @@
-export function TripCard(trip) {
+export const TripCard = (data) => {
     return `
         <div class="trip-card">
-            <img src="${trip.image}" alt="Trip to ${trip.destination}" />
+            <h2>${data.destination}</h2>
+            <img src="${data.image}" alt="Trip image" />
             <div class="trip-info">
-                <h2>My trip to: ${trip.destination}</h2>
-                <p><strong>Departing:</strong> ${trip.departureDate}</p>
-                <p>${trip.daysAway} days away</p>
-                <button class="save-trip">Save Trip</button>
-                <button class="remove-trip">Remove Trip</button>
+                <p><strong>Departure Date:</strong> ${data.departureDate}</p>
+                <p><strong>Days Away:</strong> ${data.daysAway}</p>
+                <div class="weather-info">
+                    <p><strong>Weather:</strong> ${data.weather.description}</p>
+                    <p><strong>High:</strong> ${data.weather.high}°C</p>
+                    <p><strong>Low:</strong> ${data.weather.low}°C</p>
+                </div>
+                <div class="flight-info">
+                    <p><strong>Flight:</strong> ${data.flight.number}</p>
+                    <p><strong>Departure:</strong> ${data.flight.departureTime}</p>
+                    <p><strong>Airline:</strong> ${data.flight.airline}</p>
+                </div>
             </div>
         </div>
     `;
-}
+};

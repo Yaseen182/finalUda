@@ -1,18 +1,14 @@
 const express = require('express');
-const cors = require('cors');
-const bodyParser = require('body-parser');
-const dotenv = require('dotenv');
-dotenv.config();
+const path = require('path');
 
 const app = express();
-const PORT = 8081;
+const PORT = 8084;
 
-app.use(cors());
-app.use(bodyParser.json());
-app.use(express.static('dist'));
+// Use absolute path to serve static files
+app.use(express.static(path.join(__dirname, '../../dist')));
 
 app.get('/', (req, res) => {
-  res.sendFile('dist/index.html');
+  res.sendFile(path.join(__dirname, '../../dist/index.html'));
 });
 
 app.listen(PORT, () => {

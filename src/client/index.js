@@ -1,15 +1,15 @@
-import { Header } from './components/Header.js';
-import { TripCard } from './components/TripCard.js';
-import { AddTripButton } from './components/AddTripButton.js';
-import { WeatherInfo } from './components/WeatherInfo.js';
-import { FlightInfo } from './components/FlightInfo.js';
+import { Header } from './js/Header.js';
+import { TripCard } from './js/TripCard.js';
+import { AddTripButton } from './js/AddTripButton.js';
+import { WeatherInfo } from './js/WeatherInfo.js';
+import { FlightInfo } from './js/FlightInfo.js';
 
 // Sample Data
 const tripData = {
     destination: "Paris, France",
     departureDate: "02/12/2025",
     daysAway: 220,
-    image: "https://source.unsplash.com/600x400/?paris",
+    image: "https://images.pexels.com/photos/338515/pexels-photo-338515.jpeg",
     weather: { high: 46, low: 35, description: "Mostly cloudy" },
     flight: { number: "ORD 300PM", departureTime: "3:00 PM", airline: "UDCITY AIR" }
 };
@@ -24,3 +24,16 @@ document.getElementById('app').innerHTML = `
         ${FlightInfo(tripData.flight)}
     </main>
 `;
+
+// ✅ Step 3: Add Event Listener After Rendering
+document.addEventListener("DOMContentLoaded", () => {
+    const addTripBtn = document.getElementById("addTripBtn");
+
+    if (addTripBtn) {
+        addTripBtn.addEventListener("click", () => {
+            alert("Add Trip button clicked!");
+        });
+    } else {
+        console.error("Button not found in the DOM.");
+    }
+});
